@@ -171,3 +171,24 @@
 	    	color: darkgrey;
 	    	font-family: 'OmnesMed';
 	    }
+		.background-white{
+	    	color: #000;
+	    	background-color: #fff;
+	    	font-size: 14px;
+	    }
+	    ul{
+	    	list-style: none;
+	    	padding-left: 0px;
+	    }
+	    li{
+	    	text-transform: capitalize;
+	    	border-bottom: 1px solid red;
+	    }
+	    li:hover{
+	    	background-color: grey;
+	    }
+	    label{
+	    	text-transform: capitalize;
+	    	font-family: 'OmnesMed';
+	    }
+	    
