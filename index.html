@@ -18,14 +18,25 @@
 					width: 20%;
 					margin-bottom: 5px;
 					min-height: 20px;
+					font-family:'OmnesMed';
 				}
-/*				label{
-					display: block;
-				}*/
+				label{
+					font-family:'OmnesMed';
+				}
 				label:after{
 					content: ':';
 				}
 				input:focus{
+					outline: none;
+				}
+				.select{
+					min-width: 80%;
+					border: none;
+					border: 1px solid #000;
+					color: #000;
+					font-family:'OmnesBol';
+				}
+				.select:focus{
 					outline: none;
 				}
 				input[type="submit"]{
@@ -36,9 +47,13 @@
 				}
 				.xo{
 					width: 100%;
+					font-family:'OmnesBol';
+				}
+				.xo1{
+					width: 100%;
 				}
 				.borderedy{
-					font-size: 12px;
+					font-size: 14px;
 					
 				}
 				.toto{
@@ -243,8 +258,8 @@
 			       	<div class=" background-white">
 			       		<table class="table table-bordered ">
 			       				<tr>
-			       					<td>Size (in mm)</td>
-			       					<td>90X190X390</td>
+			       					<td>Size (in inch)</td>
+			       					<td>15X3X7</td>
 			       				</tr>
 			       				<tr>
 			       					<td>Weight</td>
@@ -344,10 +359,12 @@
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-<!--       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel"></h4> 
-      </div> -->
+      <div class="modal-header">
+       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+       <!-- <span aria-hidden="true">&times;</span> -->
+       <img src="assets/img/cr.png" alt="" width="20px" height="20px">
+       </button>
+      </div>
       <div class="modal-body">
 		<div class="row ">
 		  <div class="col-md-6">
@@ -361,15 +378,26 @@
 		<div class="col-md-6 borderedy">
 		<form onsubmit="return calculate()" name="calculator" class="toto" action="">
 			<label for="ia">Brick length</label>
-				<input type="text" name="ia" id="ia" value="10" size="10" class="infield" onblur="calculate();" />
-				<select name="uia" onchange="calculate();" class="infield">
+				<!-- <input type="text" name="ia" id="ia" value="10" size="10" class="infield" onblur="calculate();" /> -->
+				<select name="ia" id="ia" onchange="calculate();" class="infield select">
+					<option value="10">10 inches</option>
+					<option value="9">9 inches</option>
+					<option value="15">15 inches</option>
+				</select>
+				<select name="uia" onchange="calculate();" class="infield" hidden="">
 					<option value="1000:1:0" >mm</option>
 					<option value="100:1:0" >cm</option>
 					<option value="39.370078740157:1:0" selected="selected">inches</option>
-				</select><hr>
+				</select>
 			<label for="ib">Brick height</label>
-				<input type="text" name="ib" id="ib" value="5" size="10" class="infield" onblur="calculate();" />
-				<select name="uib" onchange="calculate();" class="infield">
+				<!-- <input type="text" name="ib" id="ib" value="5" size="10" class="infield" onblur="calculate();" /> -->
+				<select name="ib" id="ib" onchange="calculate();" class="infield select">
+					<option value="3">3 inches</option>
+					<option value="4">4 inches</option>
+					<option value="5">5 inches</option>
+					<option value="7">7 inches</option>
+				</select>
+				<select name="uib" onchange="calculate();" class="infield" hidden="">
 					<option value="1000:1:0" >mm</option>
 					<option value="100:1:0" >cm</option>
 					<option value="39.370078740157:1:0" selected="selected">inches</option>
@@ -397,8 +425,8 @@
 			<input type="text" name="ig" value="1" size="10" class="infield" onblur="calculate();" />
 			<hr>
 			<label for="oa">Estimated Bricks</label>
-			<input type="text" name="oa" value="Please Wait" size="10" readonly="readonly" class="outfield xo" />
-			<input type="button" name="go" value="Calculate!" onclick="return calculate()" class="calculate btn-danger xo" />
+					<input type="text" name="oa" value="Please Wait" size="10" readonly="readonly" class="outfield xo" />
+					<input type="button" name="go" value="Calculate!" onclick="return calculate()" class="calculate btn-danger xo1" />
 		</form>
 		  </div>
 		</div>
