@@ -34,10 +34,13 @@
 					border: none;
 					border: 1px solid #000;
 					color: #000;
-					font-family:'OmnesBol';
+					font-family:'OmnesMed';
 				}
 				.select:focus{
 					outline: none;
+				}
+				.bold{
+					font-family:'OmnesBol';
 				}
 				input[type="submit"]{
 					margin-top: 10px;
@@ -402,25 +405,26 @@
 					<option value="100:1:0" >cm</option>
 					<option value="39.370078740157:1:0" selected="selected">inches</option>
 				</select><hr>
-			<label for="ic">Mortar thickness</label>
-				<input type="text" name="ic" id="ic" value="10" size="10" class="infield" onblur="calculate();" />
-				<select name="uic" onchange="calculate();" class="infield">
-					<option value="1000:1:0" selected="selected">mm</option>
-					<option value="100:1:0" >cm</option>
-					<option value="39.370078740157:1:0" >inches</option>
-				</select><hr>
 			<label for="id">Wall length</label>
 				<input type="text" name="id" id="id" value="0" size="10" class="infield" onblur="calculate();" />
 				<select name="uid" onchange="calculate();" class="infield">
 					<option value="1:1:0" >m</option>
 					<option value="3.280839895:1:0" selected="selected">feet</option>
-				</select><hr>
+				</select>
 			<label for="ie">Wall height</label>
 				<input type="text" name="ie" id="ie" value="0" size="10" class="infield" onblur="calculate();" />
 				<select name="uie" onchange="calculate();" class="infield">
 					<option value="1:1:0" >m</option>
 					<option value="3.280839895:1:0" selected="selected">feet</option>
 				</select><hr>
+			<label class="bold">Other Specifications</label><br>
+			<label for="ic">Mortar thickness</label>
+				<input type="text" name="ic" id="ic" value="10" size="10" class="infield" onblur="calculate();" />
+				<select name="uic" onchange="calculate();" class="infield">
+					<option value="1000:1:0" selected="selected">mm</option>
+					<option value="100:1:0" >cm</option>
+					<option value="39.370078740157:1:0" >inches</option>
+				</select>
 			<label for="ig">Wall thickness(layers)</label>
 			<input type="text" name="ig" value="1" size="10" class="infield" onblur="calculate();" />
 			<hr>
